@@ -4,30 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ce4781a-2661-43bf-aa2d-7e59474e2934" name="Changes" comment="Initial Commit">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sa/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sa/cli/CLIArguments.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sa/cli/CommanderFunctions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sa/cli/validators/FilenameValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sa/cli/validators/HelpValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sa/cli/validators/LevelFilterConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sa/core/functional/PredicateFunctions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sa/core/functional/UtilsFunctions.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sa/core/log/Level.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sa/core/models/Log.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sa/core/reader/LocalFileReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sa/core/reader/Reader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sa/core/reader/strategies/JsonLogStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sa/core/reader/strategies/ReaderStrategy.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sa/core/reader/strategies/StandardLogStrategy.java" afterDir="false" />
+    <list default="true" id="5ce4781a-2661-43bf-aa2d-7e59474e2934" name="Changes" comment="Reader Factory, Colorize impl">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sa/cli/color/Color.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sa/cli/color/ColorVariant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sa/cli/color/Colorize.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sa/cli/validators/FormatConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sa/core/Format.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sa/core/reader/ReaderFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sa/core/writer/Writer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sa/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sa/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sa/cli/CLIArguments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sa/cli/CLIArguments.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sa/core/models/Log.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sa/core/models/Log.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sa/core/reader/LocalFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sa/core/reader/LocalFileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sa/core/reader/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sa/core/reader/Reader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sa/core/reader/strategies/JsonLogStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sa/core/reader/strategies/JsonLogStrategy.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,13 +29,14 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Enum" />
         <option value="Class" />
-        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIEW_PUSH_PROTECTED_ONLY" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -69,7 +62,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "terminal"
+    "settings.editor.selected.configurable": "vcs.Git"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -110,7 +103,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1667501342951</updated>
-      <workItem from="1667501344315" duration="23296000" />
+      <workItem from="1667501344315" duration="23744000" />
+      <workItem from="1667570081029" duration="1644000" />
+      <workItem from="1667585911900" duration="6602000" />
     </task>
     <servers />
   </component>
@@ -130,20 +125,16 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
+    <MESSAGE value="Reader Factory, Colorize impl" />
+    <option name="LAST_COMMIT_MESSAGE" value="Reader Factory, Colorize impl" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$USER_HOME$/.ideaLibSources/jcommander-1.82-sources.jar!/com/beust/jcommander/converters/EnumConverter.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>jar://$USER_HOME$/.ideaLibSources/jcommander-1.82-sources.jar!/com/beust/jcommander/converters/EnumConverter.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="7" />
+          <url>file://$PROJECT_DIR$/src/main/java/com/sa/cli/color/Color.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

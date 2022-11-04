@@ -4,9 +4,9 @@ import com.beust.jcommander.JCommander;
 import com.sa.cli.CLIArguments;
 import com.sa.cli.CommanderFunctions;
 import com.sa.core.models.Log;
-import com.sa.core.reader.LocalFileReader;
 import com.sa.core.reader.Reader;
-import com.sa.core.reader.strategies.StandardLogStrategy;
+import com.sa.core.reader.ReaderFactory;
+import com.sa.core.writer.Writer;
 
 import java.util.Collections;
 import java.util.List;
@@ -32,10 +32,13 @@ public class Main {
 
         if (cliOptional.isPresent()) {
             CLIArguments arguments = cliOptional.get();
-            Reader reader = new LocalFileReader(StandardLogStrategy.getInstance())
+
+            Reader reader = ReaderFactory
+                    .getReader("", arguments.getInputFormat())
                     .setFilePath(arguments.getFilepath())
                     .setLogLevel(arguments.getLogLevel());
             List<Log> list = reader.readToList();
+            Writer writer = new Writer();
             list.forEach(System.out::println);
         }
     }

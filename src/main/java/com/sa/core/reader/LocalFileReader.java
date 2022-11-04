@@ -6,7 +6,7 @@ import com.sa.core.reader.strategies.ReaderStrategy;
 import java.util.List;
 
 public final class LocalFileReader implements Reader {
-
+    public static final String NAME = "LOCAL";
     private ReaderStrategy strategy;
     private String filepath;
 

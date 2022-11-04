@@ -1,5 +1,8 @@
 package com.sa.core.models;
 
+import com.sa.cli.color.Color;
+import com.sa.cli.color.ColorVariant;
+import com.sa.cli.color.Colorize;
 import com.sa.core.log.Level;
 
 import java.time.LocalDateTime;
@@ -38,7 +41,7 @@ public class Log {
     @Override
     public String toString() {
         return new StringJoiner(", ", Log.class.getSimpleName() + "[", "]")
-                .add("level='" + level + "'")
+                .add(Colorize.colorize("level='" + level + "'", Color.RED, ColorVariant.BRIGHT))
                 .add("dateTime=" + dateTime)
                 .add("message='" + message + "'")
                 .add("extraParams=" + extraParams)

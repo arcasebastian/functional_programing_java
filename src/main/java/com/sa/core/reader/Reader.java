@@ -5,9 +5,7 @@ import com.sa.core.log.Level;
 import com.sa.core.models.Log;
 import com.sa.core.reader.strategies.ReaderStrategy;
 
-import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileReader;
 import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
@@ -20,14 +18,10 @@ public interface Reader {
         return file.exists();
     }
 
-    ;
-
     default boolean isReadable() {
         File file = new File(this.getFilePath());
         return file.canRead();
     }
-
-    ;
 
     default List<Log> readToList() {
         List<Log> resultList = new LinkedList<>();
@@ -43,8 +37,6 @@ public interface Reader {
         }
         return resultList;
     }
-
-    ;
 
     ReaderStrategy getStrategy();
 
