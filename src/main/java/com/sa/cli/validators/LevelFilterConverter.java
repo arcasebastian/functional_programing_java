@@ -1,7 +1,7 @@
 package com.sa.cli.validators;
 
 import com.beust.jcommander.converters.EnumConverter;
-import com.sa.core.log.Level;
+import com.sa.core.enums.Level;
 
 public class LevelFilterConverter extends EnumConverter<Level> {
 

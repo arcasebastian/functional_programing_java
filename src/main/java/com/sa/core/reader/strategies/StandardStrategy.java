@@ -9,17 +9,17 @@ import java.nio.file.Paths;
 import java.time.LocalDateTime;
 import java.util.stream.Stream;
 
-public class StandardLogStrategy implements ReaderStrategy {
+public class StandardStrategy implements ReaderStrategy {
 
-    private static StandardLogStrategy instance = null;
+    private static StandardStrategy instance = null;
 
 
-    private StandardLogStrategy() {
+    private StandardStrategy() {
     }
 
-    public static StandardLogStrategy getInstance() {
+    public static StandardStrategy getInstance() {
         if (null == instance) {
-            instance = new StandardLogStrategy();
+            instance = new StandardStrategy();
         }
         return instance;
     }

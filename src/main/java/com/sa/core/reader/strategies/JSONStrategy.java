@@ -5,15 +5,15 @@ import com.sa.core.models.Log;
 import java.io.IOException;
 import java.util.stream.Stream;
 
-public class JsonLogStrategy implements ReaderStrategy {
-    private static JsonLogStrategy instance = null;
+public class JSONStrategy implements ReaderStrategy {
+    private static JSONStrategy instance = null;
 
-    private JsonLogStrategy() {
+    private JSONStrategy() {
     }
 
-    public static JsonLogStrategy getInstance() {
+    public static JSONStrategy getInstance() {
         if (null == instance) {
-            instance = new JsonLogStrategy();
+            instance = new JSONStrategy();
         }
         return instance;
     }

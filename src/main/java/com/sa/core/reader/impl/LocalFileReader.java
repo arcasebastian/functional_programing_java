@@ -1,6 +1,7 @@
-package com.sa.core.reader;
+package com.sa.core.reader.impl;
 
-import com.sa.core.log.Level;
+import com.sa.core.enums.Level;
+import com.sa.core.reader.Reader;
 import com.sa.core.reader.strategies.ReaderStrategy;
 
 import java.util.List;

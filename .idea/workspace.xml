@@ -4,22 +4,37 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ce4781a-2661-43bf-aa2d-7e59474e2934" name="Changes" comment="Reader Factory, Colorize impl">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sa/cli/color/Color.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sa/cli/color/ColorVariant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sa/cli/color/Colorize.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sa/cli/validators/FormatConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sa/core/Format.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sa/core/reader/ReaderFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/sa/core/writer/Writer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="5ce4781a-2661-43bf-aa2d-7e59474e2934" name="Changes" comment="Table and Standard Output strategies.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sa/cli/validators/ColorThemeConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sa/cli/validators/OutputLevelConverter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sa/core/enums/ColorTheme.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sa/core/enums/Format.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sa/core/enums/OutputLevel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sa/core/theme/DefaultColorTheme.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sa/core/theme/NoColorTheme.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sa/core/theme/Theme.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sa/core/writer/WriterFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sa/core/writer/impl/ConsoleWriter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sa/core/writer/strategies/JSONStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sa/core/writer/strategies/StandardStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sa/core/writer/strategies/TableStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/sa/core/writer/strategies/WriterStrategy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sa/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sa/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sa/cli/CLIArguments.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sa/cli/CLIArguments.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sa/cli/CommanderFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sa/cli/CommanderFunctions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sa/cli/validators/FormatConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sa/cli/validators/FormatConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sa/cli/validators/LevelFilterConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sa/cli/validators/LevelFilterConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sa/core/Format.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sa/core/log/Level.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sa/core/enums/Level.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sa/core/models/Log.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sa/core/models/Log.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sa/core/reader/LocalFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sa/core/reader/LocalFileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sa/core/reader/LocalFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sa/core/reader/impl/LocalFileReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/sa/core/reader/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sa/core/reader/Reader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/sa/core/reader/strategies/JsonLogStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sa/core/reader/strategies/JsonLogStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sa/core/reader/ReaderFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sa/core/reader/ReaderFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sa/core/reader/strategies/JsonLogStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sa/core/reader/strategies/JSONStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sa/core/reader/strategies/StandardLogStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sa/core/reader/strategies/StandardStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/sa/core/writer/Writer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/sa/core/writer/Writer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +77,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "vcs.Git"
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -78,7 +93,7 @@
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sa.Main" />
       <module name="LogReader" />
-      <option name="PROGRAM_PARAMETERS" value="-f DEBUG  $PROJECT_DIR$/../../test.log" />
+      <option name="PROGRAM_PARAMETERS" value="-f DEBUG -c COLOR -o STANDARD $PROJECT_DIR$/../../test.log" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.sa.*" />
@@ -106,7 +121,29 @@
       <workItem from="1667501344315" duration="23744000" />
       <workItem from="1667570081029" duration="1644000" />
       <workItem from="1667585911900" duration="6602000" />
+      <workItem from="1667592546192" duration="4364000" />
+      <workItem from="1667599778982" duration="658000" />
+      <workItem from="1667823534590" duration="10896000" />
+      <workItem from="1667837835639" duration="16000" />
+      <workItem from="1667846272952" duration="1971000" />
+      <workItem from="1667930488509" duration="8000" />
+      <workItem from="1668191473870" duration="774000" />
+      <workItem from="1668192261162" duration="997000" />
+      <workItem from="1668193608807" duration="167000" />
+      <workItem from="1668193788514" duration="518000" />
+      <workItem from="1668194316650" duration="1469000" />
+      <workItem from="1668195796511" duration="1127000" />
+      <workItem from="1668196933968" duration="319000" />
+      <workItem from="1668197263346" duration="875000" />
     </task>
+    <task id="LOCAL-00001" summary="Reader Factory, Colorize impl">
+      <created>1667592598873</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1667592598873</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,7 +163,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Reader Factory, Colorize impl" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reader Factory, Colorize impl" />
+    <MESSAGE value="Color themes, ConsoleWriter, TableStrategy.java" />
+    <MESSAGE value="Table and Standard Output strategies." />
+    <option name="LAST_COMMIT_MESSAGE" value="Table and Standard Output strategies." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -136,6 +175,20 @@
           <line>26</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/sa/core/writer/strategies/TableStrategy.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/sa/core/writer/strategies/TableStrategy.java</url>
+          <line>29</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="18" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

@@ -1,9 +1,10 @@
 package com.sa.core.reader;
 
-import com.sa.core.Format;
-import com.sa.core.reader.strategies.JsonLogStrategy;
+import com.sa.core.enums.Format;
+import com.sa.core.reader.impl.LocalFileReader;
+import com.sa.core.reader.strategies.JSONStrategy;
 import com.sa.core.reader.strategies.ReaderStrategy;
-import com.sa.core.reader.strategies.StandardLogStrategy;
+import com.sa.core.reader.strategies.StandardStrategy;
 
 public class ReaderFactory {
     public static Reader getReader(String mod, Format type) {
@@ -21,10 +22,10 @@ public class ReaderFactory {
     public static ReaderStrategy getStrategy(Format type) {
         ReaderStrategy strategy = null;
         if (type.equals(Format.JSON)) {
-            strategy = JsonLogStrategy.getInstance();
+            strategy = JSONStrategy.getInstance();
         }
         if (type.equals(Format.STANDARD)) {
-            strategy = StandardLogStrategy.getInstance();
+            strategy = StandardStrategy.getInstance();
         }
         return strategy;
     }

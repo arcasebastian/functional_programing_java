@@ -6,7 +6,7 @@ import com.sa.cli.CommanderFunctions;
 import com.sa.core.models.Log;
 import com.sa.core.reader.Reader;
 import com.sa.core.reader.ReaderFactory;
-import com.sa.core.writer.Writer;
+import com.sa.core.writer.WriterFactory;
 
 import java.util.Collections;
 import java.util.List;
@@ -38,8 +38,11 @@ public class Main {
                     .setFilePath(arguments.getFilepath())
                     .setLogLevel(arguments.getLogLevel());
             List<Log> list = reader.readToList();
-            Writer writer = new Writer();
-            list.forEach(System.out::println);
+            WriterFactory
+                    .getWriter("", arguments.getOutputFormat())
+                    .setColorTheme(arguments.getColorTheme())
+                    .setOutputLevel(arguments.getOutputLevel())
+                    .write(list);
         }
     }
 }

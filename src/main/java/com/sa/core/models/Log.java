@@ -1,9 +1,6 @@
 package com.sa.core.models;
 
-import com.sa.cli.color.Color;
-import com.sa.cli.color.ColorVariant;
-import com.sa.cli.color.Colorize;
-import com.sa.core.log.Level;
+import com.sa.core.enums.Level;
 
 import java.time.LocalDateTime;
 import java.util.HashMap;
@@ -13,12 +10,8 @@ public class Log {
     private Level level;
     private LocalDateTime dateTime;
     private String message;
-    private HashMap<String, Object> extraParams;
 
-    public Log setDateTime(LocalDateTime dateTime) {
-        this.dateTime = dateTime;
-        return this;
-    }
+    private HashMap<String, Object> extraParams;
 
     public Level getLevel() {
         return this.level;
@@ -33,6 +26,19 @@ public class Log {
         return this;
     }
 
+    public LocalDateTime getDateTime() {
+        return dateTime;
+    }
+
+    public Log setDateTime(LocalDateTime dateTime) {
+        this.dateTime = dateTime;
+        return this;
+    }
+
+    public String getMessage() {
+        return message;
+    }
+
     public Log setMessage(String message) {
         this.message = message;
         return this;
@@ -41,7 +47,7 @@ public class Log {
     @Override
     public String toString() {
         return new StringJoiner(", ", Log.class.getSimpleName() + "[", "]")
-                .add(Colorize.colorize("level='" + level + "'", Color.RED, ColorVariant.BRIGHT))
+                .add("level='" + level + "'")
                 .add("dateTime=" + dateTime)
                 .add("message='" + message + "'")
                 .add("extraParams=" + extraParams)

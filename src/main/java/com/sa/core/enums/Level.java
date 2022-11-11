@@ -1,4 +1,4 @@
-package com.sa.core.log;
+package com.sa.core.enums;
 
 public enum Level {
     INFO,

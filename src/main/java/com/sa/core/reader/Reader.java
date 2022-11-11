@@ -1,7 +1,7 @@
 package com.sa.core.reader;
 
 import com.sa.core.functional.PredicateFunctions;
-import com.sa.core.log.Level;
+import com.sa.core.enums.Level;
 import com.sa.core.models.Log;
 import com.sa.core.reader.strategies.ReaderStrategy;
 

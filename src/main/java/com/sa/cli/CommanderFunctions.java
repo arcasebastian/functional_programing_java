@@ -34,7 +34,6 @@ public interface CommanderFunctions {
         } catch (ParameterException exception) {
             onCommandError.onError(jCommander);
         }
-
         return Optional.empty();
     }
 
